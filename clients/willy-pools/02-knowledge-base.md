@@ -2,7 +2,7 @@
 
 Status key:
 - **Known**: from Bryan's notes or the current website. Still read it back to Dean once.
-- **[ASK WILLY]**: unknown. The agent must not answer these until filled; it takes a message instead.
+- **[ASK DEAN]**: unknown. The agent must not answer these until filled; it takes a message instead.
 - **[CONFIRM]**: Bryan's guess. Dean must sign off before the agent says it.
 
 Paste this whole file into the Retell/Vapi knowledge base (or the prompt's knowledge section) once the gaps are filled. Remove this status key before pasting.
@@ -14,49 +14,49 @@ Paste this whole file into the Retell/Vapi knowledge base (or the prompt's knowl
 |---|---|---|
 | Business name | Willy Pools | Known |
 | What we are | Mobile pool servicing plus a pool shop/store | Known |
-| Owner | Dean [ASK WILLY: name to use on the phone, e.g. "Will"?] | Partly known |
+| Owner | Dean | Known |
 | Store address | 11/10 Literary Way, Williamstown North VIC | Known |
-| Finding the store / parking | [ASK WILLY] | Unknown |
+| Finding the store / parking | [ASK DEAN] | Unknown |
 | Main phone | 0457 275 163 | Known |
-| Email | [ASK WILLY] | Unknown |
+| Email | [ASK DEAN] | Unknown |
 | Website | willypools.com.au | Known |
-| Payment methods | [ASK WILLY] | Unknown |
+| Payment methods | [ASK DEAN] | Unknown |
 
 ## Store hours
 | Season | Days | Hours | Status |
 |---|---|---|---|
-| Summer ([ASK WILLY] start/end dates) | [from current website, copy exactly] | [from current website] | Check website |
-| Winter | [ASK WILLY] | [ASK WILLY] | Unknown |
-| Public holidays | [ASK WILLY] | | Unknown |
+| Summer ([ASK DEAN] start/end dates) | [from current website, copy exactly] | [from current website] | Check website |
+| Winter | [ASK DEAN] | [ASK DEAN] | Unknown |
+| Public holidays | [ASK DEAN] | | Unknown |
 
 ## Service area
 Williamstown, Williamstown North, Newport, Yarraville, Seddon, Spotswood, Altona, Footscray, Kingsville. (Known)
 
-Outside these suburbs: [ASK WILLY: "take details and Dean will let you know" or "sorry, we don't cover that area"?]
+Outside these suburbs: [ASK DEAN: "take details and Dean will let you know" or "sorry, we don't cover that area"?]
 
 ## Services
 ### Regular pool servicing
-- Frequency options: [ASK WILLY: weekly / fortnightly / monthly]
-- What's included in a visit: [ASK WILLY]
+- Frequency options: [ASK DEAN: weekly / fortnightly / monthly]
+- What's included in a visit: [ASK DEAN]
 - Price to say on the phone: "from $150 a month plus chemicals" **[CONFIRM]**
-- How soon a new client can start: [ASK WILLY]
+- How soon a new client can start: [ASK DEAN]
 
 ### One-off cleans and green pools
-- Offered: [ASK WILLY]
-- Price line: [ASK WILLY: "from $X" or "quote after seeing it"]
+- Offered: [ASK DEAN]
+- Price line: [ASK DEAN: "from $X" or "quote after seeing it"]
 
 ### Repairs and equipment
 - Equipment covered: pumps, filters, chlorinators, heaters, robotic cleaners [CONFIRM each]
-- Brands: Maytronics / Dolphin robotic cleaners **[CONFIRM: stocked? serviced? both?]**; others [ASK WILLY]
-- Call-out fee: [ASK WILLY]
+- Brands: Maytronics / Dolphin robotic cleaners **[CONFIRM: stocked? serviced? both?]**; others [ASK DEAN]
+- Call-out fee: [ASK DEAN]
 - Price line: jobs range from a few hundred dollars up to about $3,000; the agent says "Dean will quote once he knows the problem" and never gives a number. (Known policy)
-- Warranty claims: [ASK WILLY]
+- Warranty claims: [ASK DEAN]
 
 ### Free water testing (in store)
 - Free: yes **[CONFIRM]**
-- How much water and in what: [ASK WILLY, e.g. "a clean 500 ml bottle taken from elbow depth, away from the skimmer"]
-- How long it takes: [ASK WILLY]
-- Bring anything else? [ASK WILLY]
+- How much water and in what: [ASK DEAN, e.g. "a clean 500 ml bottle taken from elbow depth, away from the skimmer"]
+- How long it takes: [ASK DEAN]
+- Bring anything else? [ASK DEAN]
 
 ### Shop
 - Chemicals: yes (Focus Chemicals range) [CONFIRM brand to mention]
@@ -65,26 +65,26 @@ Outside these suburbs: [ASK WILLY: "take details and Dean will let you know" or 
 
 ## Booking
 - The agent never books a time. It captures details; Dean books in Liqua.
-- Online booking link or portal to text callers: [ASK WILLY: does Liqua have one?]
-- Callback promise: within **[ASK WILLY]** hours during business hours.
+- Online booking link or portal to text callers: [ASK DEAN: does Liqua have one?]
+- Callback promise: within **[ASK DEAN]** hours during business hours.
 
 ## Things the agent must never do
 - Promise a visit date or time.
 - Quote a repair or equipment price.
 - Give chemical dosing advice beyond "bring a water sample in for a free test". [CONFIRM]
 - Say anything about competitors.
-- [ASK WILLY: anything else]
+- [ASK DEAN: anything else]
 
 ## Top caller questions (fill with Dean's own wording)
 | # | Question | Dean's answer | Status |
 |---|---|---|---|
-| 1 | Do you sell / service Maytronics Dolphin? | | [ASK WILLY] |
-| 2 | Where are you and where do I park? | | [ASK WILLY] |
+| 1 | Do you sell / service Maytronics Dolphin? | | [ASK DEAN] |
+| 2 | Where are you and where do I park? | | [ASK DEAN] |
 | 3 | What are your hours? | (see hours table) | Partly known |
-| 4 | Can I bring water in for testing? How much? | | [ASK WILLY] |
+| 4 | Can I bring water in for testing? How much? | | [ASK DEAN] |
 | 5 | Do you service my suburb? | (see service area) | Known |
 | 6 | How much is a regular service? | "From $150 a month plus chemicals" | [CONFIRM] |
-| 7 | My pool's gone green, can you help? | | [ASK WILLY] |
+| 7 | My pool's gone green, can you help? | | [ASK DEAN] |
 | 8 | My pump won't start / is noisy / leaking | Repair flow, hot lead | Known policy |
-| 9 | My robot cleaner stopped working | | [ASK WILLY] |
-| 10 | | | [ASK WILLY] |
+| 9 | My robot cleaner stopped working | | [ASK DEAN] |
+| 10 | | | [ASK DEAN] |

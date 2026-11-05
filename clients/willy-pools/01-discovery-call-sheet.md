@@ -1,7 +1,7 @@
 # Willy Pools: 10-minute discovery call
 
 Goal: leave the call with everything needed to build the demo agent within 3 days.
-Fill answers straight into `02-knowledge-base.md` (every `[ASK WILLY]` there maps to a question here).
+Fill answers straight into `02-knowledge-base.md` (every `[ASK DEAN]` there maps to a question here).
 
 Tip: ask if you can record the call (phone voice memo) so you can lift his exact wording for answers. Callers trust an agent that sounds like the owner.
 
