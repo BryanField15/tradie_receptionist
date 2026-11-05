@@ -5,7 +5,7 @@ Fields in `{{ }}` come from the post-call analysis in `03-agent-system-prompt.md
 ## How it's wired (no code needed for v1)
 1. Retell (or Vapi) sends a post-call webhook when each call ends.
 2. A Make.com or Zapier scenario catches it, picks the template by `call_type`, then:
-   - sends the SMS to Willy via Twilio,
+   - sends the SMS to Dean via Twilio,
    - sends the email via Gmail/Outlook,
    - for `repair_hot_lead`, also texts the caller the photo-upload link,
    - logs a row in a Google Sheet (date, call type, suburb, urgency, booked Y/N). That sheet is the case-study tracker.
@@ -16,7 +16,7 @@ The one-tap callback link is just the number written as `tel:` in email and plai
 
 ---
 
-## SMS to Willy
+## SMS to Dean
 
 **New service**
 ```
@@ -32,7 +32,7 @@ NEW SERVICE: {{caller_name}}, {{suburb}}. {{pool_type}}, {{sanitiser}}, wants {{
 ```
 FYI answered: {{one_line_summary}} ({{callback_number}}). No callback needed.
 ```
-(Willy may find these noisy. Offer to switch them to a daily digest after week one.)
+(Dean may find these noisy. Offer to switch them to a daily digest after week one.)
 
 **Message / callback**
 ```
@@ -41,19 +41,19 @@ CALL BACK: {{caller_name}}, {{one_line_summary}}. {{callback_number}}
 
 ## SMS to caller (repair flow only)
 ```
-Hi {{caller_name}}, it's Willy Pools. Reply to this text with a photo of the equipment (and the label if you can) so Willy can bring the right parts. He'll call you soon.
+Hi {{caller_name}}, it's Willy Pools. Reply to this text with a photo of the equipment (and the label if you can) so Dean can bring the right parts. He'll call you soon.
 ```
 Note: replying with a photo is MMS, which Twilio charges at ~US$0.35 inbound in AU. A cheaper option is a link to a simple upload form (e.g. a Tally or Google Form with file upload). Decide before go-live.
 
 ## SMS to caller (new service, optional)
 ```
-Thanks {{caller_name}}, Willy Pools here. Got your details for a regular service in {{suburb}}. Willy will call you to set a time.
+Thanks {{caller_name}}, Willy Pools here. Got your details for a regular service in {{suburb}}. Dean will call you to set a time.
 ```
 Optional because every caller text adds cost. Good for trust; try it in the trial.
 
 ---
 
-## Email to Willy
+## Email to Dean
 
 **Subject:** `{{call_type_label}}: {{caller_name}}, {{suburb}}` (add `[URGENT] ` prefix when `urgency = high`)
 
