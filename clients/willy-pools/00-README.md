@@ -5,10 +5,11 @@ First client build for the AI tradie receptionist. Goal: a demo number Dean can 
 | File | What it's for |
 |---|---|
 | `01-discovery-call-sheet.md` | The 10-minute call with Dean. Every answer fills a gap in the KB. |
-| `02-knowledge-base.md` | What the agent knows. Prefilled; gaps marked `[ASK DEAN]` / `[CONFIRM]`. |
+| `02-knowledge-base.md` | What the agent knows (v0.2, filled from Dean's answers and brochure). Open items marked `[ASK DEAN]` / `[CONFIRM]`. |
 | `03-agent-system-prompt.md` | Paste-ready prompt, call flows, post-call fields, test calls. |
 | `04-summary-templates.md` | SMS and email to Dean (and the caller), plus how to wire them. |
-| `05-eval-suite.md` | 18 pass/fail test calls to rerun after every change. |
+| `05-eval-suite.md` | 22 pass/fail test calls to rerun after every change. |
+| `06-dean-answers.md` | Dean's questionnaire answers (10 Nov 2026), what changed, and what's still open. |
 
 Nothing in here is a confirmed price for the client. Internal only.
 

@@ -16,6 +16,27 @@ The one-tap callback link is just the number written as `tel:` in email and plai
 
 ---
 
+## Missed-call text-back (what Dean asked to start with)
+Dean said he'd rather start with a text-back than an AI voice (10 Nov 2026). When a call to his mobile goes unanswered, his Telstra "forward when unanswered/busy" sends it to the Twilio number, which plays a short message and texts the caller.
+
+Short voice message on the Twilio number (recorded or TTS, then hang up):
+```
+Hi, you've reached Willy Pools. Dean's on a job. We'll text you now so you can tell us what you need.
+```
+
+SMS to the caller (2 segments, keep it):
+```
+Hi, it's Willy Pools. Sorry we missed you, Dean's on a job. Reply with your name, suburb and what you need (and a photo if it's equipment) and he'll get back to you within a day or two.
+```
+
+SMS to Dean when they reply:
+```
+TEXT-BACK: {{caller_number}} replied: "{{reply_text}}"
+```
+Same Make/Zapier scenario and Google Sheet as below. Twilio's inbound SMS webhook triggers it instead of the Retell post-call webhook. A photo reply is MMS (~US$0.35 each).
+
+---
+
 ## SMS to Dean
 
 **New service**
@@ -23,7 +44,7 @@ The one-tap callback link is just the number written as `tel:` in email and plai
 NEW SERVICE: {{caller_name}}, {{suburb}}. {{pool_type}}, {{sanitiser}}, wants {{service_frequency}}. Call {{callback_number}}
 ```
 
-**Repair / equipment (hot lead)**
+**Equipment replacement, repair or robot purchase (hot lead)**
 ```
 🔥 HOT LEAD: {{problem}} ({{equipment}}). {{suburb}}, urgency {{urgency}}. {{caller_name}} {{callback_number}}
 ```
@@ -41,13 +62,13 @@ CALL BACK: {{caller_name}}, {{one_line_summary}}. {{callback_number}}
 
 ## SMS to caller (repair flow only)
 ```
-Hi {{caller_name}}, it's Willy Pools. Reply to this text with a photo of the equipment (and the label if you can) so Dean can bring the right parts. He'll call you soon.
+Hi {{caller_name}}, it's Willy Pools. Reply to this text with a photo of the equipment (and the label if you can) so Dean can bring the right parts. He'll be in touch soon.
 ```
 Note: replying with a photo is MMS, which Twilio charges at ~US$0.35 inbound in AU. A cheaper option is a link to a simple upload form (e.g. a Tally or Google Form with file upload). Decide before go-live.
 
 ## SMS to caller (new service, optional)
 ```
-Thanks {{caller_name}}, Willy Pools here. Got your details for a regular service in {{suburb}}. Dean will call you to set a time.
+Thanks {{caller_name}}, Willy Pools here. Got your details for a regular service in {{suburb}}. Dean will be in touch within a day or two to set a time.
 ```
 Optional because every caller text adds cost. Good for trust; try it in the trial.
 
@@ -65,7 +86,8 @@ Call back: {{caller_name}} on {{callback_number}}   [Tap to call](tel:{{callback
 Details
 - Type: {{call_type_label}}
 - Suburb / address: {{suburb}}, {{address}}
-- Pool: {{pool_type}}, {{sanitiser}}
+- Pool: {{pool_or_spa}}, {{pool_volume}}, {{pool_type}}, {{sanitiser}}
+- Email: {{email}}
 - Service wanted: {{service_frequency}}
 - Problem: {{problem}}
 - Equipment: {{equipment}}
